@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">PTSGENAP10RPL211</string>
+    <string name="text_forgot">Forgot your login details? <font color="#B9E9FF">Get help logging in.</font> </string>
+    <string name="sign_up">Don\'t have an account? <font color="#B9E9FF">Sign up.</font></string>
+    <string name="textLanguage">English (United States)</string>
+    <string name="textLogo">Instagram</string>
+</resources>
