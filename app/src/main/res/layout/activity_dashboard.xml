@@ -7,8 +7,48 @@
     android:orientation="vertical"
     tools:context=".dashboard">
 
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/line_color">
+        <RelativeLayout
+            android:id="@+id/relativlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="?attr/actionBarSize"
+                app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
+                app:navigationIconTint="@color/white"/>
+
+            <TextView
+                android:id="@+id/logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/fontspring_regular"
+                android:text="@string/textLogo"
+                android:textColor="@color/white"
+                android:textSize="45sp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="All Posts"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:background="@color/black"/>
+
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvdata"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 

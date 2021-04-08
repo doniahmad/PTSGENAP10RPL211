@@ -1,19 +1,23 @@
 package com.example.ptsgenap10rpl211;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Adapter;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.appbar.MaterialToolbar;
+
 import java.util.ArrayList;
 
 public class dashboard extends AppCompatActivity {
-
-
+    private MaterialToolbar btnback;
     private RecyclerView recyclerView;
-    private AccountAdapter adapter;
-    private ArrayList<Account> accountArrayList;
+    private PostAdapter adapter;
+    private ArrayList<Post> postAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,16 +26,16 @@ public class dashboard extends AppCompatActivity {
         recyclerView = (RecyclerView) findViewById(R.id.rvdata);
 
         addData();
-        adapter = new AccountAdapter(accountArrayList);
+        adapter = new PostAdapter(postAdapter);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(dashboard.this);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
     }
 
     private void addData() {
-        accountArrayList = new ArrayList<>();
-        accountArrayList.add(new Account("Sari","11032451","sariri@gmail.com"));
-        accountArrayList.add(new Account("Burhan","11043567","burhanan@gmail.com"));
-        accountArrayList.add(new Account("Nusa","11046647","nusantaraga@gmail.com"));
+        postAdapter = new ArrayList<>();
+        postAdapter.add(new Post("Sari",0));
+        postAdapter.add(new Post("Burhan",1));
+        postAdapter.add(new Post("Nusa",3));
     }
 }
