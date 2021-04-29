@@ -1,27 +1,37 @@
 package com.example.ptsgenap10rpl211;
 
 public class Post {
-    private String judul;
-    private int total;
+    private String nama;
+    private String email;
+    private String absen;
 
-    public Post (String judul,int total){
-        this.setJudul(judul);
-        this.setTotal(total);
+    public Post (String nama,String email,String absen){
+        this.nama = nama;
+        this.email = email;
+        this.absen = absen;
     }
 
-    public String getJudul() {
-        return judul;
+    public String getNama() {
+        return nama;
     }
 
-    public void setJudul(String judul) {
-        this.judul = judul;
+    public void setNama(String nama) {
+        this.nama = nama;
     }
 
-    public int getTotal() {
-        return total;
+    public String getEmail() {
+        return email;
     }
 
-    public void setTotal(int total) {
-        this.total = total;
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getAbsen() {
+        return absen;
+    }
+
+    public void setAbsen(String absen) {
+        this.absen = absen;
     }
 }
